@@ -19,3 +19,17 @@
 #The clean command below the clean target should delete all of the .o files.
 #Do not add unnecessary commands or dependencies. 
 #Answer the questions in the second page of the quiz.
+
+CC = g++
+
+CFLAGS = -c -Wall -g -std=c++11
+
+OBJS = makeAnimals.o Animal.o Dog.o
+
+makeAnimals: $(OBJS)
+	$(CC) $(OBJS) -o makeAnimals
+
+suffix: .C .o
+
+clean:
+	rm -f *.o
