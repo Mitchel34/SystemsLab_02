@@ -1,0 +1,20 @@
+/*
+Mitchel Carson
+Systems I
+Appalachian State University
+Dr. Hamza
+*/
+#include "Animal.h"
+#include "Dog.h"
+
+int main()
+{
+   Animal * a;
+   a = new Animal();
+
+   a->makeSound();
+   a->move();
+   a = new Dog();
+   a->makeSound();
+   a->move();
+}
