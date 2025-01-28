@@ -12,14 +12,31 @@
 #Answer first page of quiz questions using your makefile.
 #
 
-makeNumber: makeNumber.o Number.o
-	g++ makeNumber.o Number.o -o makeNumber
+CC = g++
 
-makeNumber.o: makeNumber.C Number.h
-	g++ -c makeNumber.C
+CFLAGS = -c -Wall -g -std=c++11
 
-Number.o: Number.C Number.h
-	g++ -c Number.C
+OBJS = makeNumber.o Number.o
+
+makeNumber: $(OBJS)
+	$(CC) $(OBJS) -o makeNumber
+
+suffix: .C .o 
 
 clean:
 	rm -f *.o
+
+# Original makefile
+
+
+
+
+
+
+
+
+	
+
+
+
+

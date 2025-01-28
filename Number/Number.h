@@ -13,4 +13,3 @@ class Number
       int getNumber(void);
       void setNumber(int);
 };
-
