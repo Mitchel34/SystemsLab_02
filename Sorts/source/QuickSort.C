@@ -1,5 +1,5 @@
-#include "Sort.h"
-#include "QuickSort.h"
+#include "../include/Sort.h"
+#include "../include/QuickSort.h"
 
 void QuickSort::sort(int * list, int count)
 {

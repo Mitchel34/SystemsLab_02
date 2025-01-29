@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Sort.h"
+#include "../include/Sort.h"
 
 void Sort::sort(int * list, int length)
 {

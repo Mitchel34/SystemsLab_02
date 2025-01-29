@@ -20,16 +20,21 @@
 #Do not add unnecessary commands or dependencies. 
 #Answer the questions in the second page of the quiz.
 
-CC = g++
-
+CC     = g++
 CFLAGS = -c -Wall -g -std=c++11
-
-OBJS = makeAnimals.o Animal.o Dog.o
+OBJS   = makeAnimals.o Animal.o Dog.o
 
 makeAnimals: $(OBJS)
 	$(CC) $(OBJS) -o makeAnimals
 
-suffix: .C .o
+makeAnimals.o: makeAnimals.C Animal.h Dog.h
+	$(CC) $(CFLAGS) makeAnimals.C
+
+Animal.o: Animal.C Animal.h
+	$(CC) $(CFLAGS) Animal.C
+
+Dog.o: Dog.C Dog.h
+	$(CC) $(CFLAGS) Dog.C
 
 clean:
-	rm -f *.o
+	rm -f *.o makeAnimals

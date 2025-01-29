@@ -4,11 +4,11 @@
 #include <string>
 #include <string.h>
 
-#include "Sort.h"
-#include "BubbleSort.h"
-#include "MergeSort.h"
-#include "QuickSort.h"
-#include "List.h"
+#include "../include/Sort.h"
+#include "../include/BubbleSort.h"
+#include "../include/MergeSort.h"
+#include "../include/QuickSort.h"
+#include "../include/List.h"
 
 /* functions that are local to this file */
 static bool checkInput(std::string buffer); //, int bufsize);

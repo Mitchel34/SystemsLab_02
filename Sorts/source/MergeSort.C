@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Sort.h"
-#include "MergeSort.h"
+#include "../include/Sort.h"
+#include "../include/MergeSort.h"
 
 void MergeSort::sort(int * list, int length)
 {

@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Sort.h"
-#include "BubbleSort.h"
+#include "../include/Sort.h"
+#include "../include/BubbleSort.h"
 
 
 //use bubbleSort to sort a list of integers

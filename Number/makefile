@@ -14,19 +14,28 @@
 
 CC = g++
 
+#CFLAGS is the compiler flags
 CFLAGS = -c -Wall -g -std=c++11
 
+#OBJS is the object files that should be linked together to create the executable
 OBJS = makeNumber.o Number.o
 
+#first taret is the final executable
 makeNumber: $(OBJS)
 	$(CC) $(OBJS) -o makeNumber
+	
+#rebuild makeNumber.o if makeNumber.C or Number.h changes
+makeNumber.o: makeNumber.C Number.h
+	$(CC) $(CFLAGS) makeNumber.C
 
-suffix: .C .o 
+#rebuild Number.p if Number.C or Number.h changes
+Number.o: Number.C Number.h
+	$(CC) $(CFLAGS) Number.C
 
+# 'make clean' will remove the .o files
 clean:
 	rm -f *.o
 
-# Original makefile
 
 
 

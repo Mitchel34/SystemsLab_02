@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
-#include "Sort.h"
-#include "List.h"
+#include "../include/Sort.h"
+#include "../include/List.h"
 
 List::List(int length, Sort * sort)
 {
